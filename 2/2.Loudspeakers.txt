@@ -1,0 +1,114 @@
+Loudspeakers
+
+Problem
+You are going to make a street speech. There are N people in the audience who will listen to your speech.
+
+The ith person among the N people is standing at the position xi meters east and yi meters north from the position where you are standing. More than one person might be standing at a certain position.
+
+You are going to install three loudspeakers at three different places so that the listeners can hear your voice more clearly.
+
+Voices from the ith loudspeaker among the three loudspeakers reach those who are within di meters from the place where it is installed.
+
+The installation positions of the loudspeakers have the restrictions explained below:
+
+1. The loudspeakers must be installed at a position some integer meters east and some integer meters north from the position where you are standing.
+2. No loudspeaker must be installed at a position where at least one listener is standing.
+3. One of the loudspeakers may be installed at the position where you are standing.
+More than one loudspeaker may not be installed at the same position.
+
+The number of listeners who can hear your voice will change according to the locations where the loudspeakers are installed.
+
+You want to install the loudspeakers in a way that your voice can be heard by as many listeners as possible.
+
+Calculate the number of listeners who can hear your voice in a loudspeaker configuration that maximizes that number.
+
+The “listeners who can hear your voice” means that the listeners who are at locations where the voice from one or more loudspeakers can be reached.
+
+Input
+Input is given from the standard input in the format shown below:
+
+d1 d2 d3
+N
+x1 y1
+:
+xN yN
+1. In the first line, integers d1(1≦d1≦10),d2(1≦d2≦10) and d3(1≦d3≦10), which indicate the distances that the voices from the three loudspeakers can reach, are given separated with spaces.
+2. In the second line, an integer N(1≦N≦100), which indicates the number of the listeners, is given.
+3. In the following N lines, the ith line contains integers xi(1≦xi≦8) and yi(1≦yi≦8), separated by space, which indicate the location where the ith listener is standing.
+
+Output
+Output the number of the listeners, in a single line, who can hear your voice in the case that the loudspeakers are installed in a way that your voice can be heard by as many listeners as possible.
+
+Write output to the standard output and insert LF at the end of the line.
+
+Input Example 1
+1 1 1
+10
+1 2
+2 1
+2 3
+3 2
+3 7
+4 8
+5 5
+6 4
+6 6
+7 5
+Output Example 1
+10
+When a position x meters east and y meters north from the position where you are standing is expressed as (x, y), if you install the loudspeakers at (2, 2), (3, 8), and (6, 5), everyone in the audience can hear your voice.
+
+Input Example 2
+1 1 1
+3
+1 1
+1 2
+2 1
+Output Example 2
+3
+
+Input Example 3
+1 1 1
+3
+7 8
+8 7
+8 8
+Output Example 3
+3
+
+Input Example 4
+1 1 1
+15
+2 2
+2 2
+2 2
+2 2
+2 2
+2 2
+3 5
+3 5
+6 2
+6 2
+6 2
+5 6
+5 6
+5 6
+5 6
+Input Example 4
+13
+
+Input Example 5
+1 1 1
+10
+2 3
+3 2
+3 3
+3 4
+4 3
+1 8
+2 7
+8 1
+7 2
+6 1
+Output Example 5
+7
